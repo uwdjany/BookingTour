@@ -1,0 +1,35 @@
+
+
+h1{
+    position: relative;
+    font-size: 14 vw;
+    color: aliceblue;
+    -webkit-text-stroke: 0.3 vw lightblue;
+    text-transform: uppercase;
+}
+h1::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    -webkit-stroke:0 vw #383d52;
+    border-right: 2px solid white;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+
+}
+@keyframes animate{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+
+
+    width: 100%;
+    }
+}
